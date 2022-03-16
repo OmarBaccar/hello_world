@@ -7,11 +7,12 @@ pipeline {
         }
         }
         stage('SonarQube Analysis') {
-        script {
-    def scannerHome = tool 'SonarQube';}
-     steps{
-     withSonarQubeEnv('SonarQube') {
-      sh "${scannerHome}/bin/sonar-scanner"
+        steps{
+          script {
+   		 def scannerHome = tool 'SonarQube';}
+     
+     	  withSonarQubeEnv('SonarQube') {
+            sh "${scannerHome}/bin/sonar-scanner"
     }
   }} 
         stage('DEPLOY') {
