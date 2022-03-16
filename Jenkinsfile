@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('SCM') {
             steps{
-	    git 'https://github.com/OmarBaccar/hello_world.git', branch: 'master'            
+	    git url: 'https://github.com/OmarBaccar/hello_world.git', branch: 'master'            
         }
         }
         
