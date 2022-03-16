@@ -11,6 +11,12 @@ pipeline {
                 echo 'Testing app'
             }
         }
+	stage('SonarQube Analysis') {
+              def scannerHome = tool 'SonarScanner';
+           withSonarQubeEnv() {
+              sh "${scannerHome}/bin/sonar-scanner"
+        }
+         }
         stage('DEPLOY') {
             steps {
                 echo 'deploying app'
