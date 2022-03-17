@@ -10,9 +10,6 @@ node {
              }
        } 
         stage('DEPLOY') {
-            steps{
                 echo 'deploying app'
         }
-	}
     }
-}
