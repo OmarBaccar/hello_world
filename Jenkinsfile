@@ -1,6 +1,4 @@
 node {
-    agent any
-    stages {
         stage('SCM') {
 	    git credentialsId: 'JENKINS_TOKEN', url: 'https://github.com/OmarBaccar/hello_world.git', branch: 'master'            
         }
