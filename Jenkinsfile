@@ -1,4 +1,4 @@
-node (label: 'linux') {
+node (label: 'Linux') {
         stage('SCM') {
 	    git credentialsId: 'JENKINS_TOKEN', url: 'https://github.com/OmarBaccar/hello_world.git', branch: 'master'            
         }
