@@ -1,15 +1,13 @@
-pipeline  {
-	agent any
-	stages {
-        stage('SCM') {
+pipeline {
+    agent any
+    stages { 
+	stage('SCM') {
 	    git url: 'https://github.com/OmarBaccar/hello_world.git', branch: 'master'            
         }
-        stage('SonarQube Analysis') {
-
-          echo 'scanning code'
-       } 
-        stage('DEPLOY') {
-                echo 'deploying app'
+        stage('Example') {
+            steps {
+                echo 'Hello World'
+            }
         }
     }
 }
