@@ -1,4 +1,6 @@
-node (label: 'Linux') {
+pipeline  {
+	agent any
+	stages {
         stage('SCM') {
 	    git url: 'https://github.com/OmarBaccar/hello_world.git', branch: 'master'            
         }
@@ -10,3 +12,4 @@ node (label: 'Linux') {
                 echo 'deploying app'
         }
     }
+}
